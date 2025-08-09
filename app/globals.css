@@ -10,20 +10,37 @@
   --font-geist-mono: 'Geist Mono', monospace;
 }
 
+.light {
+  --background: #faf4db;
+  --textcol: #1c2b3b;
+  --primary: #24487a;
+  --secondary: #dab9a0;
+  --accent: #912310;
+}
+
+.dark {
+  --background: #101923;
+  --textcol: #faf4db;
+  --primary: #7fa9dc;
+  --secondary: #c19c7b;
+  --accent: #f87e63;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--textcol);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --textcol: #faf4db;
     --background: #101923;
+    --background-rgb: 16, 25, 35;
     --primary: #7fa9dc;
     --secondary: #c19c7b;
     --accent: #f87e63;
     --font-geist-sans: 'Geist Sans', sans-serif;
     --font-geist-mono: 'Geist Mono', monospace;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--textcol);
-  font-family: Arial, Helvetica, sans-serif;
 }
